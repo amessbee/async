@@ -1,4 +1,14 @@
 {
   "name": "test2",
-  "packageManager": "yarn@4.5.0"
+  "type": "module",
+  "packageManager": "yarn@1.22.19",
+  "dependencies": {
+    "@endo/eventual-send": "^1.2.6",
+    "@endo/far": "0.2.22",
+    "@endo/init": "^1.1.5"
+  },
+  "scripts": {
+    "test1": "node test1.js",
+    "test2": "node test2.js"
+  }
 }
