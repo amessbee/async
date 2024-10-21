@@ -2,7 +2,7 @@ import '@endo/init';
 import { E, Far } from '@endo/far';
 
 console.log('======================');
-console.log('Hello from test2.js');
+console.log('Hello from async call test using E()');
 console.log('======================');
 
 // Create a remote object presence
