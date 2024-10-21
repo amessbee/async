@@ -58,6 +58,19 @@
   dependencies:
     "@endo/env-options" "^1.1.7"
 
+"@endo/exo@^1.5.4":
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/@endo/exo/-/exo-1.5.4.tgz#ae970d79ea3abb2b90cf3cd4685e73969799b255"
+  integrity sha512-+z4fMRuqPGHV1dxRuVyAk13l7NBjQdADOKkGbRPuT+u1aa2jEikTr2MERYNGjuWaC33PKf1dxT+o7EUai8GEjQ==
+  dependencies:
+    "@endo/common" "^1.2.6"
+    "@endo/env-options" "^1.1.7"
+    "@endo/errors" "^1.2.6"
+    "@endo/eventual-send" "^1.2.6"
+    "@endo/far" "^1.1.6"
+    "@endo/pass-style" "^1.4.4"
+    "@endo/patterns" "^1.4.4"
+
 "@endo/far@0.2.22":
   version "0.2.22"
   resolved "https://registry.yarnpkg.com/@endo/far/-/far-0.2.22.tgz#fda187289a903ee3f9d6dcc5664ee7fef1994b1f"
@@ -65,6 +78,15 @@
   dependencies:
     "@endo/eventual-send" "^0.17.6"
     "@endo/pass-style" "^0.1.7"
+
+"@endo/far@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@endo/far/-/far-1.1.6.tgz#ca5804da58762cf8b7ecbf8bdd902254d898d456"
+  integrity sha512-rpMzGyyumpk0rXxIh189zimhMJknzfyJX+HCiYHXELk/iuX53HqwqVobP9HWB65lD9M2nwySgXWtxI75Lx4Afw==
+  dependencies:
+    "@endo/errors" "^1.2.6"
+    "@endo/eventual-send" "^1.2.6"
+    "@endo/pass-style" "^1.4.4"
 
 "@endo/init@^1.1.5":
   version "1.1.5"
@@ -118,6 +140,17 @@
     "@endo/eventual-send" "^1.2.6"
     "@endo/promise-kit" "^1.1.6"
     "@fast-check/ava" "^1.1.5"
+
+"@endo/patterns@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@endo/patterns/-/patterns-1.4.4.tgz#94a52e9b639c5f72a352d6dd6a1bbcfca7049528"
+  integrity sha512-C2EL7mFMsNRdvOv42u6gNIZNvWrJFSidoE9lhwZv64YX2mj8S5FNJq3cdnQPXqmn9IDfh3itYcZ50ff4r1R4pQ==
+  dependencies:
+    "@endo/common" "^1.2.6"
+    "@endo/errors" "^1.2.6"
+    "@endo/eventual-send" "^1.2.6"
+    "@endo/marshal" "^1.5.4"
+    "@endo/promise-kit" "^1.1.6"
 
 "@endo/promise-kit@^0.2.60":
   version "0.2.60"
