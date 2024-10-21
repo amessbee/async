@@ -1,14 +1,19 @@
 {
-  "name": "test2",
+  "name": "async",
   "type": "module",
   "packageManager": "yarn@1.22.19",
   "dependencies": {
+    "@endo/captp": "^4.4.0",
     "@endo/eventual-send": "^1.2.6",
     "@endo/far": "0.2.22",
-    "@endo/init": "^1.1.5"
+    "@endo/init": "^1.1.5",
+    "@endo/marshal": "^1.5.4",
+    "@endo/stream": "^1.2.6",
+    "http": "^0.0.1-security",
+    "jayson": "^4.1.2",
+    "ws": "^8.18.0"
   },
   "scripts": {
-    "test1": "node test1.js",
-    "test2": "node test2.js"
-  }
+  },
+  "license": "MIT"
 }
