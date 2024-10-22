@@ -1,7 +1,15 @@
-import "@endo/init";
+// import "@endo/init";
+import '@agoric/swingset-liveslots/tools/prepare-test-env.js';
 import { makeCapTP } from "@endo/captp";
+import { makeHeapZone } from "@agoric/zone/heap.js";
 import { makeExo } from "@endo/exo";
 import { WebSocketServer } from "ws";
+import { makeScalarMapStore } from "@agoric/store";
+
+
+const myBaggage = makeScalarMapStore("my baggage");
+// const zone = makeDurableZone(myBaggage);
+const zone = makeHeapZone(myBaggage);
 
 const makeValidatedUsers = () => {
   let users = [];
