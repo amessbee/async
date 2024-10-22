@@ -32,7 +32,6 @@ This example shows how to pipeline remote calls using `E()`.
 - **Improved Efficiency**: Pipelining allows for handling multiple remote operations concurrently, saving bandwidth.
 - **Simplified Code**: Complex error handling is reduced, as remote object interactions feel native to JavaScript.
 
-
 ## Installation
 
 To install the necessary dependencies, run:
@@ -67,5 +66,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 - [Endo Marshal Library](https://github.com/endojs/endo)
 - [CapTP](https://github.com/endojs/captp)
-
-

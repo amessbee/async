@@ -1,5 +1,5 @@
 //server.js
-import {WebSocketServer} from 'ws';
+import { WebSocketServer } from "ws";
 
 const wss = new WebSocketServer({ port: 8080 });
 
@@ -16,24 +16,26 @@ async function fetchUserData(userId) {
   });
 }
 
-wss.on('connection', (ws) => {
-  console.log('Client connected');
+wss.on("connection", (ws) => {
+  console.log("Client connected");
 
-  ws.on('message', async (message) => {
+  ws.on("message", async (message) => {
     try {
       const data = JSON.parse(message);
-      console.log('Received:', data);
+      console.log("Received:", data);
 
-      if (data.method === 'fetchUser') {
+      if (data.method === "fetchUser") {
         const userData = await fetchUserData(data.userId);
-        ws.send(JSON.stringify({ type: 'userData', data: userData }));
+        ws.send(JSON.stringify({ type: "userData", data: userData }));
       }
     } catch (error) {
-      console.error('Error processing message:', error);
+      console.error("Error processing message:", error);
     }
   });
 
-  ws.on('close', () => { console.log('Client disconnected');});
+  ws.on("close", () => {
+    console.log("Client disconnected");
+  });
 });
 
-console.log('WebSocket server is running on ws://localhost:8080');
+console.log("WebSocket server is running on ws://localhost:8080");
