@@ -19,7 +19,7 @@ const makeValidatedUsers = () => {
 };
 
 // Create CapTP remotable bootstarp object
-const bootStrap = makeExo("makeValidatedUsers", undefined, {
+const bootStrap = zone.exo('makeValidatedUsers', undefined, {
   makeValidatedUsers,
 });
 
