@@ -3,11 +3,10 @@ import '@agoric/swingset-liveslots/tools/prepare-test-env.js';
 import { nextLife } from '@agoric/swingset-liveslots/tools/prepare-strict-test-env.js';
 import { M } from '@endo/patterns';
 import { makeCapTP } from "@endo/captp";
-import { makeHeapZone } from "@agoric/zone/heap.js";
+import { makeDurableZone } from "@agoric/zone/durable.js";
 import { makeExo } from "@endo/exo";
 import { WebSocketServer } from "ws";
 import { reincarnate } from '@agoric/swingset-liveslots/tools/setup-vat-data.js';
-import { makeExo } from "@endo/exo";
 
 let incarnation = reincarnate();
 
