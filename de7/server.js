@@ -3,6 +3,7 @@ import '@agoric/swingset-liveslots/tools/prepare-test-env.js';
 import { nextLife } from '@agoric/swingset-liveslots/tools/prepare-strict-test-env.js';
 import { M } from '@endo/patterns';
 import { makeCapTP } from "@endo/captp";
+import { prepareVowTools } from '@agoric/vow';
 import { makeDurableZone } from "@agoric/zone/durable.js";
 import { makeExo } from "@endo/exo";
 import { WebSocketServer } from "ws";
@@ -53,7 +54,12 @@ wss.on("connection", (wss) => {
   incarnation = reincarnate();
 
   zone = makeDurableZone( myBaggage, 'durableRoot');
-  
+  const vowZone = zone.subZone('VowTools');
+  // TODO: the below already breaks the code without doing any good
+  const { watch, makeVowKit } = prepareVowTools(vowZone);
+  const { resolver, vow } = makeVowKit();
+  // TODO: what's next? We need to show that something breaks without vow
+
   users = zone.weakMapStore('users', {
     keyShape: M.number(),
     valueShape: M.string(), 
