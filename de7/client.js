@@ -18,6 +18,16 @@ ws.onopen = () => {
   // Get remote object and call its method
   const bootStrap = getBootstrap();
   let usersList = [];
+  
+  function generateRandomString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    const charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
 
   E(bootStrap)
     .makeValidatedUsers()
@@ -25,6 +35,7 @@ ws.onopen = () => {
       usersList = _usersList;
       E(usersList).addUser("Alice");
       E(usersList).addUser("Bob");
+      E(usersList).addUser(generateRandomString(4));
       return E(usersList).addUser("Carol");
     })
     .then(async (count) => {
